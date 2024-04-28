@@ -2,6 +2,7 @@ package com.jesse.treffpunktservice.web;
 
 import com.jesse.treffpunktservice.domain.User;
 import com.jesse.treffpunktservice.domain.UserService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,7 +15,7 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
+    public User createUser(@Valid @RequestBody User user) {
         return service.addUserToCatalog(user);
     }
 
