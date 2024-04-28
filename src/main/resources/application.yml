@@ -6,5 +6,6 @@ server:
   tomcat:
     connection-timeout: 2s
     keep-alive-timeout: 15s
-    threads: 50
-    min-spare: 5
+    threads:
+      max: 50
+      min-spare: 5
